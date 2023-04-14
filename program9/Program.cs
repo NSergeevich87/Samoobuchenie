@@ -3,10 +3,23 @@
 // Найти сумму четных чисел в массиве
 // Найти наименьшее число в массиве
 
-int[] newArray = new int[] { 1, 2, 3, -4, 5, 6, 7, -8, 9 };
+Console.Clear();
+
+System.Console.Write("Введите количество элементов в массиве:\t");
+int numElem = int.Parse(Console.ReadLine());
+
+int[] newArray = new int[numElem];
 
 int len = newArray.Length;
 System.Console.WriteLine(len);
+
+for (int i = 0; i < newArray.Length; i++)
+{
+    int newElemOfArray = 0;
+    System.Console.WriteLine($"Введите {i}й элемент массива: ");
+    newElemOfArray = int.Parse(Console.ReadLine());
+    newArray[i] = newElemOfArray;
+}
 
 int sum = 0;
 int minNumber = newArray[0];
