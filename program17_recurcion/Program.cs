@@ -28,60 +28,33 @@ int[] NewArray(int number)
 
 void PrintArray(int[] array, int i = 0)
 {
-
-    if (i <= array.Length - 1)
+    if (i < array.Length)
     {
         System.Console.Write($"{array[i]} ");
-        i++;
+        PrintArray(array, i + 1);
     }
-    else return;
-
-    PrintArray(array, i);
 }
 
-void SumElemOfArray(int[] array, int sum = 0, int i = 0)
+int SumElemOfArray(int[] array, int i = 0)
 {
-    if (i == array.Length)
-    {
-        System.Console.WriteLine(sum);
-        return;
-    }
-    else
-    {
-        sum += array[i];
-        i++;
-    }
-
-    SumElemOfArray(array, sum, i);
+    if (i >= array.Length) return 0;
+    return array[i] + SumElemOfArray(array, i + 1);
 }
 
-void SumOfNamber(int num, int result = 0)
+int SumOfNamber(int num)
 {
-    if (num > 0)
-    {
-        int number = num;
-        num /= 10;
-        number %= 10;
-
-        result += number;
-    }
-    else
-    {
-        System.Console.WriteLine(result);
-        return;
-    }
-    
-    SumOfNamber(num, result);
-
+    if (num < 10) return num;
+    return num % 10 + SumOfNamber(num / 10);
 }
 
 int size = NewMessage("Vvedite razmer massiva: ");
 int[] newArray = NewArray(size);
 PrintArray(newArray);
 System.Console.WriteLine();
-SumElemOfArray(newArray);
+int num = SumElemOfArray(newArray);
+System.Console.WriteLine(num);
 
 int number = NewMessage("Vvedite chislo: ");
-SumOfNamber(number);
-
+int number2 = SumOfNamber(number);
+System.Console.WriteLine(number2);
 
