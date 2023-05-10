@@ -1,0 +1,15 @@
+C:\Users\Professional\source\repos\Clase_65\bin\Debug\net6.0\Clase_65.exe
+C:\Users\Professional\source\repos\Clase_65\bin\Debug\net6.0\Clase_65.deps.json
+C:\Users\Professional\source\repos\Clase_65\bin\Debug\net6.0\Clase_65.runtimeconfig.json
+C:\Users\Professional\source\repos\Clase_65\bin\Debug\net6.0\Clase_65.dll
+C:\Users\Professional\source\repos\Clase_65\bin\Debug\net6.0\Clase_65.pdb
+C:\Users\Professional\source\repos\Clase_65\obj\Debug\net6.0\Clase_65.csproj.AssemblyReference.cache
+C:\Users\Professional\source\repos\Clase_65\obj\Debug\net6.0\Clase_65.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Professional\source\repos\Clase_65\obj\Debug\net6.0\Clase_65.AssemblyInfoInputs.cache
+C:\Users\Professional\source\repos\Clase_65\obj\Debug\net6.0\Clase_65.AssemblyInfo.cs
+C:\Users\Professional\source\repos\Clase_65\obj\Debug\net6.0\Clase_65.csproj.CoreCompileInputs.cache
+C:\Users\Professional\source\repos\Clase_65\obj\Debug\net6.0\Clase_65.dll
+C:\Users\Professional\source\repos\Clase_65\obj\Debug\net6.0\refint\Clase_65.dll
+C:\Users\Professional\source\repos\Clase_65\obj\Debug\net6.0\Clase_65.pdb
+C:\Users\Professional\source\repos\Clase_65\obj\Debug\net6.0\Clase_65.genruntimeconfig.cache
+C:\Users\Professional\source\repos\Clase_65\obj\Debug\net6.0\ref\Clase_65.dll
