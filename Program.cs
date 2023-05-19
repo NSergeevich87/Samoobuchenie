@@ -10,67 +10,58 @@
     {
         public static void Main(string[] args)
         {
-            string test = "what time are we climbingsdhthr up to the volcano"; //taxi 54
-            Console.WriteLine(High(test));
+
+            int narcissitic = 153;
+            int noNarcissitic = 1938;
+
+            //  1^3 + 5^3 + 3^3 = 1 + 125 + 27 = 153
+
+            bool isNarcissitic = Narcissistic(noNarcissitic);
+            Console.WriteLine(isNarcissitic);
         }
-        public static string High(string s)
+        public static bool Narcissistic(int value)
         {
-            char[] mesArr = s.ToLower().ToCharArray();
-
-            string alf = "abcdefghijklmnopqrstuvwxyz";
-            char[] alfArr = alf.ToCharArray();
-
-            string word = String.Empty;
-            int maxSum = 0;
-            int sum = 0;
-            string newWord = String.Empty;
-
-            for (int i = 0; i < mesArr.Length; i++)
-            {
-                if (mesArr[i] == ' ')
-                {
-                    i++;
-                    if (maxSum < sum)
-                    {
-                        maxSum = sum;
-                        newWord = word;
-                    }
-                    sum = 0;
-                    word = "";
-                }
-                for (int j = 0; j < alfArr.Length; j++)
-                {
-                    if (i == mesArr.Length - 1)
-                    {
-                        if (mesArr[i] == alfArr[j])
-                        {
-                            sum += j + 1;
-                            word += mesArr[i];
-                            if (maxSum < sum)
-                            {
-                                maxSum = sum;
-                                newWord = word;
-                            }
-                            break;
-                        }
-                    }
-                    else if (mesArr[i] == alfArr[j])
-                    {
-                        sum += j + 1;
-                        word += mesArr[i];
-                        break;
-                    }
-                }
-            }
-            return newWord;
+            // Code me
+            var str = value.ToString();
+            return str.Sum(c => Math.Pow(Convert.ToInt16(c.ToString()), str.Length)) == value;
         }
 
         public static void PrintArr(int[] array)
         {
-            for (int i = 0; i <= array.Length - 1; i++)
+            for (int i = 0; i < array.Length; i++)
             {
-                Console.Write(array[i]);
+                Console.Write($" {array[i]}");
             }
+        }
+
+        public static int[] arrRandom(int[] arr)
+        {
+            Random rand = new Random();
+
+            for (int i = 0; i < arr.Length; i++)
+            {
+                arr[i] = rand.Next(10);
+            }
+
+            return arr;
+        }
+
+        public static int[] arrSort(int[] arr)
+        {
+            for (int i = 0; i < arr.Length - 1; i++)
+            {
+                int pos = i;
+
+                for (int j = i + 1; j < arr.Length; j++)
+                {
+                    if (arr[j] < arr[pos]) pos = j;
+                }
+
+                int temp = arr[i];
+                arr[i] = arr[pos];
+                arr[pos] = temp;
+            }
+            return arr;
         }
     }
 }
